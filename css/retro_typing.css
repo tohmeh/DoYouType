@@ -269,14 +269,7 @@ body {
     color: #ffe600; /* Warm yellow */
 }
 
-#mario-theme {
-    color: #FF0000;
-    text-shadow: 0 0 5px #FF0000;
-}
 
-#mario-theme:hover {
-    background-color: rgba(255, 0, 0, 0.2);
-}
 
 /* Retro theme option */
 #retro-theme {
@@ -295,4 +288,13 @@ body {
 
 #ghibli-theme:hover {
     background-color: rgba(107, 142, 35, 0.2);
+}
+
+#simpsons-theme {
+    color: #ffd90f; /* Simpsons yellow */
+    text-shadow: 0 0 5px #ffd90f;
+}
+
+#simpsons-theme:hover {
+    background-color: rgba(255, 217, 15, 0.2);
 }

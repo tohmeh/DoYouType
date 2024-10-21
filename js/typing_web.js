@@ -25,22 +25,12 @@ let totalTests = 0;
 let totalWPM = 0;
 let totalAcc = 0;
 const themeStylesheet = document.getElementById('style_sheet');
-const marioTheme = document.getElementById('mario-theme');
 const retroTheme = document.getElementById('retro-theme');
 const gibliTheme = document.getElementById('ghibli-theme');
-const marioCharacter = document.getElementById('mario-character');
-marioTheme.addEventListener('click', function() {
-    themeStylesheet.href = 'css/super_mario.css';
-    marioCharacter.style.display = 'block';
-    left_arrow.src = 'images/ui elements/yellow_arrow.png'; // Set to Mario arrow image
-    right_arrow.src = 'images/ui elements/yellow_arrow.png'; // Set to Mario arrow image
-    restart_button.src = 'images/ui elements/yellow_restart.png'; // Set to Mario restart button image
-    next_button.src = 'images/ui elements/yellow_next.png'; // Set to Mario next button image
-});
+const simpsonTheme = document.getElementById('simpsons-theme');
 
 retroTheme.addEventListener('click', function() {
     themeStylesheet.href = 'css/retro_typing.css';
-    marioCharacter.style.display = 'none';
     left_arrow.src = 'images/ui elements/yellow_arrow.png'; // Set to Retro arrow image
     right_arrow.src = 'images/ui elements/yellow_arrow.png'; // Set to Retro arrow image
     restart_button.src = 'images/ui elements/yellow_restart.png'; // Set to Retro restart button image
@@ -49,12 +39,19 @@ retroTheme.addEventListener('click', function() {
 
 gibliTheme.addEventListener('click', function() {
     themeStylesheet.href = 'css/gibli.css';
-    marioCharacter.style.display = 'none';
     left_arrow.src = 'images/ui elements/brown_arrow.png'; // Set to Ghibli arrow image
     right_arrow.src = 'images/ui elements/brown_arrow.png'; // Set to Ghibli arrow image
     restart_button.src = 'images/ui elements/brown_restart.png'; // Set to Ghibli restart button image
     next_button.src = 'images/ui elements/brown_arrow.png'; // Set to Ghibli next button image
 });
+
+simpsonTheme.addEventListener('click', function(){
+    themeStylesheet.href = 'css/simpson.css';
+    left_arrow.src = 'images/ui elements/yellow_arrow.png'; // Set to Ghibli arrow image
+    right_arrow.src = 'images/ui elements/yellow_arrow.png'; // Set to Ghibli arrow image
+    restart_button.src = 'images/ui elements/yellow_restart.png'; // Set to Ghibli restart button image
+    next_button.src = 'images/ui elements/yellow_arrow.png'; // Set to Ghibli next button image
+})
 
 const typingTexts = [
     "The quick brown fox jumps over the lazy dog.",
