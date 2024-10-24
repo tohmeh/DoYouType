@@ -227,6 +227,10 @@ body {
     width: 200px;
 }
 
+.right_monitor_before {
+    visibility: hidden;
+    width: 200px;
+}
 .result_prompt {
     display: none;
     justify-content: space-around;

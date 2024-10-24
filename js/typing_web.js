@@ -42,7 +42,7 @@ gibliTheme.addEventListener('click', function() {
     left_arrow.src = 'images/ui elements/brown_arrow.png'; // Set to Ghibli arrow image
     right_arrow.src = 'images/ui elements/brown_arrow.png'; // Set to Ghibli arrow image
     restart_button.src = 'images/ui elements/brown_restart.png'; // Set to Ghibli restart button image
-    next_button.src = 'images/ui elements/brown_arrow.png'; // Set to Ghibli next button image
+    next_button.src = 'images/ui elements/brown_next.png'; // Set to Ghibli next button image
 });
 
 simpsonTheme.addEventListener('click', function(){
@@ -50,7 +50,7 @@ simpsonTheme.addEventListener('click', function(){
     left_arrow.src = 'images/ui elements/yellow_arrow.png'; // Set to Ghibli arrow image
     right_arrow.src = 'images/ui elements/yellow_arrow.png'; // Set to Ghibli arrow image
     restart_button.src = 'images/ui elements/yellow_restart.png'; // Set to Ghibli restart button image
-    next_button.src = 'images/ui elements/yellow_arrow.png'; // Set to Ghibli next button image
+    next_button.src = 'images/ui elements/yellow_next.png'; // Set to Ghibli next button image
 })
 
 const typingTexts = [
