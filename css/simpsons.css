@@ -10,16 +10,6 @@ body {
     background-attachment: fixed;
 }
 
-.monitors {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: stretch;
-    width: 100%;
-    max-width: 1500px;
-    margin: 0 auto;
-}
-
 .monitor {
     background-image: linear-gradient(
         to bottom right,
@@ -33,36 +23,8 @@ body {
     outline: 10px solid rgba(55,35,59,255);
 }
 
-.main_monitor {
-    width: 700px;
-    height: 400px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-}
 
-.left_monitor, .right_monitor {
-    width: 200px;
-    padding: 5px;
-}
 
-.left_monitor {
-    animation: rotate_left_monitor 0.5s forwards;
-}
-
-.left_monitor2 {
-    width: 200px;
-    animation: rotate_left_monitor_back 0.5s forwards;
-}
-
-.right_monitor2 {
-    width: 200px;
-    animation: rotate_right_monitor_back 0.5s forwards;
-}
-
-.right_monitor {
-    animation: rotate_right_monitor 0.5s forwards;
-}
 
 .monitor-content {
     color: #ffe600;
@@ -86,10 +48,6 @@ body {
 }
 .secondary_monitor_content_result {
     color: #ffe600;  /* Olive green */
-}
-
-.hidden_input {
-    visibility: hidden;
 }
 
 .updated_text {
@@ -117,11 +75,7 @@ body {
     outline: 10px solid rgba(55,35,59,255);
 }
 
-.keyboard_row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 8px;
-}
+
 
 .key {
     background-color: transparent;
@@ -138,11 +92,7 @@ body {
     animation: rgb-glow 3s infinite ease-in-out;
 }
 
-.key-1u { width: 40px; }
-.key-1_5u { width: 62px; }
-.key-2u { width: 84px; }
-.key-2_5u { width: 106px; }
-.key-space { width: 250px; }
+
 
 @keyframes rgb-glow {
     0%, 100% { box-shadow: 0 0 4px #fff, 0 0 6px #fff, 0 0 9px rgb(255, 255, 255); }
@@ -157,80 +107,7 @@ body {
 
 .cursor {
     border-bottom: 2px solid #c3ff00; /* Neon green */
-    animation: blink 0.7s step-end infinite;
-}
 
-@keyframes blink {
-    50% { border-bottom-color: transparent; }
-}
-
-@keyframes rotate_left_monitor {
-    0% { transform: translateX(110px) perspective(1000px) rotateY(90deg); }
-    100% { transform: translateX(0px) perspective(1000px) rotateY(30deg); }
-}
-
-@keyframes rotate_left_monitor_back {
-    0% { transform: translateX(0px) perspective(1000px) rotateY(30deg); }
-    100% { transform: translateX(110px) perspective(1000px) rotateY(90deg); }
-}
-
-@keyframes rotate_right_monitor {
-    0% { transform: translateX(-110px) perspective(1000px) rotateY(-90deg); }
-    100% { transform: translateX(0px) perspective(1000px) rotateY(-30deg); }
-}
-
-@keyframes rotate_right_monitor_back {
-    0% { transform: translateX(0px) perspective(1000px) rotateY(-30deg); }
-    100% { transform: translateX(-110px) perspective(1000px) rotateY(-90deg); }
-}
-
-.left_hover, .right_hover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.arrow {
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-}
-
-.left_arrow {
-    transform: rotate(180deg) translateX(10px);
-}
-
-.left_arrow2 {
-    transform: rotate(0deg) translateX(-15px);
-}
-
-.right_arrow {
-    transform: rotate(0deg) translateX(10px);
-}
-
-.right_arrow2 {
-    transform: rotate(180deg) translateX(-15px);
-}
-
-.left_arrow:hover {
-    transform: rotate(180deg) translateX(15px);
-}
-
-.left_arrow2:hover {
-    transform: rotate(0deg) translateX(-10px);
-}
-
-.right_arrow:hover {
-    transform: rotate(0deg) translateX(15px);
-}
-
-.right_arrow2:hover {
-    transform: rotate(180deg) translateX(-10px);
-}
-
-.left_monitor_before {
-    visibility: hidden;
-    width: 200px;
 }
 
 .result_prompt {
@@ -264,14 +141,6 @@ body {
     animation: retro-glow 2s linear;
 }
 
-#restart_button {
-    transform: rotate(0deg);
-    transition: transform 0.5s ease-in-out;
-}
-
-#restart_button:hover {
-    transform: rotate(360deg);
-}
 
 #avg_acc, #avg_wpm, #live_wpm, #live_acc, #final_wpm_result, #final_acc_result {
     color: #ffe600; /* Warm yellow */
@@ -279,30 +148,3 @@ body {
 
 
 
-/* Retro theme option */
-#retro-theme {
-    color: #00FFFF;
-    text-shadow: 0 0 5px #00FFFF;
-}
-
-#retro-theme:hover {
-    background-color: rgba(0, 255, 255, 0.2);
-}
-
-#ghibli-theme {
-    color: #aff12b;  /* Olive Drab */
-    text-shadow: 0 0 5px #6B8E23;
-}
-
-#ghibli-theme:hover {
-    background-color: rgba(107, 142, 35, 0.2);
-}
-
-#simpsons-theme {
-    color: #ffd90f; /* Simpsons yellow */
-    text-shadow: 0 0 5px #ffd90f;
-}
-
-#simpsons-theme:hover {
-    background-color: rgba(255, 217, 15, 0.2);
-}

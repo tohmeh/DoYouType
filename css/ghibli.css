@@ -1,0 +1,131 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('../images/backgrounds/ghibli.png'); /* Replace with a Ghibli-inspired background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+
+.monitor {
+    background-image: linear-gradient(
+        to bottom right,
+        rgba(255, 245, 238, 0.7),  /* Seashell */
+        rgba(216, 240, 230, 0.5)   /* Mint cream */
+    );
+    opacity: 0.95;
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    outline: 12px solid #5C7746;  /* Olive Drab */
+}
+
+.monitor-content {
+    color: #3A4A3C;  /* Dark green */
+    font-family: "Metal", serif;
+    font-size: 20px;
+    padding: 10px;
+    text-shadow: 1px 1px 2px #D0E7D2;  /* Light mint */
+    line-height: 1.5;
+    height: 70%;
+}
+
+.secondary_monitor_content {
+    color: #3A4A3C;  /* Dark green */
+    font-family: "Metal", serif;
+    font-size: 20px;
+    padding: 10px;
+    text-shadow: 1px 1px 2px #D0E7D2;  /* Light mint */
+    line-height: 1.5;
+}
+
+.secondary_monitor_content_result {
+    color: #6ba531;  /* Olive green */
+}
+
+.updated_text {
+    color: #D68910;  /* Dark goldenrod */
+    font-family: "Metal", serif;
+    font-size: 20px;
+}
+
+.keyboard {
+    width: 800px;
+    height: 250px;
+    transform: perspective(1000px) rotateX(50deg);
+    background-image: linear-gradient(
+        to bottom right,
+        rgba(255, 245, 238, 0.7),  /* Seashell */
+        rgba(216, 240, 230, 0.5)   /* Mint cream */
+    );
+    opacity: 0.95;
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    outline: 12px solid #5C7746;  /* Olive Drab */
+}
+
+.key {
+    background-color: transparent;
+    height: 30px;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    font-family: "Metal", serif;
+    font-size: 16px;
+    color: #3A4A3C;  /* Dark green */
+    border: 2px solid #5C7746;  /* Olive Drab */
+    animation: ghibli-glow 3s infinite ease-in-out;
+}
+
+@keyframes ghibli-glow {
+    0%, 100% { box-shadow: 0 0 2px #F9E79F, 0 0 5px #F9E79F, 0 0 7px #F4D03F; }  /* Light yellow to Yellow */
+    33% { box-shadow: 0 0 2px #ABEBC6, 0 0 5px #ABEBC6, 0 0 7px #58D68D; }  /* Pale green to Medium sea green */
+    66% { box-shadow: 0 0 2px #AED6F1, 0 0 5px #AED6F1, 0 0 7px #3498DB; }  /* Light blue to Dodger blue */
+}
+
+.key.active {
+    background-color: #5C7746;  /* Forest green */
+    box-shadow: 0 0 15px #5C7746;
+}
+
+.cursor {
+    border-bottom: 2px solid #3A4A3C;  /* Dark blue-gray */
+    
+}
+
+
+.result_prompt {
+    display: none;
+    justify-content: space-around;
+    font-size: 24px;
+    color: #3A4A3C;  /* Dark blue-gray */
+    font-family: "Metal", serif;
+    margin-bottom: 5px;
+}
+
+.result_prompt_below {
+    display: none;
+    justify-content: space-around;
+    font-size: 17px;
+    color: #4A7023;  /* Nephritis green */
+    font-family: "Metal", serif;
+}
+
+@keyframes ghibli-text-glow {
+    0% { text-shadow: 0 0 5px #F9E79F, 0 0 10px #F4D03F; }  /* Light yellow to Yellow */
+    33% { text-shadow: 0 0 5px #ABEBC6, 0 0 10px #58D68D; }  /* Pale green to Medium sea green */
+    66% { text-shadow: 0 0 5px #AED6F1, 0 0 10px #3498DB; }  /* Light blue to Dodger blue */
+    100% { text-shadow: 0 0 5px #F9E79F, 0 0 10px #F4D03F; }  /* Back to Light yellow to Yellow */
+}
+
+.ghibli-glow {
+    animation: ghibli-text-glow 4s linear infinite;
+}
+

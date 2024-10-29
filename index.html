@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Retro Type</title>
-    <link rel="stylesheet" href="css/retro_typing.css" id="style_sheet">
+    <link rel="stylesheet" href="css/retro.css" id="style_sheet">
+    <link rel="stylesheet" href="css/common.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,7 +38,7 @@
             </div>
         </div>
         <div style="display: flex; flex-direction: column;">
-            <div class="monitor main_monitor">
+            <div class="monitor main_monitor" id="monitor">
                 <div id="typing-area" class="monitor-content">Hello world !</div>
                 <input type="text" id="user-input" class="hidden_input">
                 <div class="result_prompt">
@@ -157,12 +158,19 @@
 
         <!-- Row 5 (Control and Spacebar Row) -->
         <div class="keyboard_row">
-            <div style="width: 20pxpx;">
+            <div style="width: 20px;">
             </div>
             <div id="key_space" class="key key-space">Space</div>
             <div ></div>
         </div>
     </div>
-    <script src="js/typing_web.js"></script>
+    <script src="js/utils/results.js"></script> <!-- Your file where functions are defined -->
+    <script src="js/utils/switching_themes.js"></script>
+    <script src="js/utils/text.js"></script>
+    <script src="js/utils/text_related_animation.js"></script>
+    <script src="js/utils/user_input.js"></script>
+    <script src="js/utils/secondary_monitors_animations.js"> </script>
+    <script src="js/all_event_handling.js"></script>  <!-- Another file where you use those functions -->
+
 </body>
 </html>
