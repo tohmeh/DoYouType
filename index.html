@@ -19,7 +19,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Gochi+Hand&display=swap" rel="stylesheet">
 
 </head>
-<body>
+<body id="body">
+
+    <div id="loading_gif" style="position:absolute; z-index: 1;display: flex; flex-direction: column;">
+        <div class="monitor-content" id="loading_word">loading</div>
+        <img src="images/gifs/loading.gif" style="width: 2cm;" id="loading_gif_gif">
+    </div>
     <div style="height: 100px;"></div>
     <div class="monitors">
         <div style="display: flex; flex-direction: row;">
@@ -86,7 +91,7 @@
             </div>
         </div>
     </div>
-    <div class="keyboard">
+    <div class="keyboard" id="keyboard">
         <!-- Row 1 -->
         <div class="keyboard_row">
             <div id="key_escape" class="key key-1u">Esc</div>
@@ -170,6 +175,7 @@
     <script src="js/utils/text_related_animation.js"></script>
     <script src="js/utils/user_input.js"></script>
     <script src="js/utils/secondary_monitors_animations.js"> </script>
+    <script src="js/utils/loading.js"></script>
     <script src="js/all_event_handling.js"></script>  <!-- Another file where you use those functions -->
 
 </body>

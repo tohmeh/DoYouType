@@ -29,21 +29,21 @@ function right_monitor_animation_function()
 
     if (pressed_right_window)
     {
-        const left_monitor = document.getElementById('right_monitor');
-        left_monitor.classList.remove('right_monitor2');
-        left_monitor.classList.remove('right_monitor_before');
-        left_monitor.classList.add('monitor', 'right_monitor');
+        const right_monitor= document.getElementById('right_monitor');
+        right_monitor.classList.remove('right_monitor2');
+        right_monitor.classList.remove('right_monitor_before');
+        right_monitor.classList.add('monitor', 'right_monitor');
         const left_arrow = document.getElementById('right_arrow');
-        left_arrow.classList.remove('right_arrow');
-        left_arrow.classList.add('right_arrow2');
+        right_arrow.classList.remove('right_arrow');
+        right_arrow.classList.add('right_arrow2');
     }
     else{
-        const left_monitor = document.getElementById('right_monitor');
-        left_monitor.classList.remove('right_monitor');
-        left_monitor.classList.add('right_monitor2');
+        const right_monitor = document.getElementById('right_monitor');
+        right_monitor.classList.remove('right_monitor');
+        right_monitor.classList.add('right_monitor2');
         const left_arrow = document.getElementById('right_arrow');
-        left_arrow.classList.remove('right_arrow2');
-        left_arrow.classList.add('right_arrow');
+        right_arrow.classList.remove('right_arrow2');
+        right_arrow.classList.add('right_arrow');
     }
 }
 

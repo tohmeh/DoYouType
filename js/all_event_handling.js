@@ -36,8 +36,13 @@ const themeStylesheet = document.getElementById('style_sheet');
 const retroTheme = document.getElementById('retro-theme');
 const gibliTheme = document.getElementById('ghibli-theme');
 const simpsonTheme = document.getElementById('simpsons-theme');
-
-
+const loadingDiv = document.getElementById('loading_gif');
+const Body = document.getElementById('body');
+const loadingGif = document.getElementById('loading_gif_gif');
+const loadingWord = document.getElementById('loading_word');
+const keyboard = document.getElementById('keyboard');
+const left_monitor = document.getElementById('left_monitor');
+const right_monitor = document.getElementById('right_monitor');
 let pressed_left_window = 0;
 let pressed_right_window = 0;
 let currentIndex = 0;
@@ -62,21 +67,15 @@ retroTheme.addEventListener('click', function() {switch_theme('retro');});
 gibliTheme.addEventListener('click', function() {switch_theme('ghibli');});
 simpsonTheme.addEventListener('click', function() {switch_theme('simpsons');});
 document.addEventListener('keydown', handle_user_input);
-
-
 document.addEventListener('keyup', clear_after_user_input);
-
-
 restart_button.addEventListener('click', reset_monitor_content);
-
-
 next_button.addEventListener('click', iterate_text);
-
 left_arrow.addEventListener('click', left_monitor_animation_function);
 right_arrow.addEventListener('click', right_monitor_animation_function);
 
 
-
+// showLoadingIndicator();
+// removeLoadingIndicator();
 
 updateDisplay();
 user_input.focus();
