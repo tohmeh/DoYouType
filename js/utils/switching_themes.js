@@ -5,8 +5,11 @@ function updateThemeButtons(color) {
     restart_button.src = `images/ui elements/${buttonSuffix}_restart.png`;
     next_button.src = `images/ui elements/${buttonSuffix}_next.png`;
 }
+
 function switch_theme(theme) {
+    // Show loading indicator immediately
     showLoadingIndicator();
+
     // Set the path for the new background image based on the selected theme
     let newBackgroundPath;
     switch (theme) {
@@ -52,14 +55,19 @@ function switch_theme(theme) {
         // Update the current typing content
         typing_area_content = typingTexts[currentTextIndex];
 
+        // Remove loading indicator after the image is fully loaded
+        removeLoadingIndicator();
         // Reset the monitor content
         reset_monitor_content();
 
-        // Remove loading indicator after the image is fully loaded
-        removeLoadingIndicator();
+    };
+
+    // Add error handling in case image fails to load
+    img.onerror = () => {
+        console.error('Failed to load background image');
+        removeLoadingIndicator(); // Ensure loading indicator is removed even on error
     };
 }
-
 
 window.updateThemeButtons = updateThemeButtons;
 window.switch_theme = switch_theme;
