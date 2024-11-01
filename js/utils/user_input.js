@@ -69,6 +69,17 @@ function handle_user_input()
         updateDisplay();
     }
     else if (!['Shift', 'Control', 'Alt', 'CapsLock', 'Tab', 'Escape'].includes(key_pressed)) {   
+        const cursor = document.querySelector('.cursor'); // Corrected selector
+        const originalBorderBottom = cursor.style.borderBottom;
+        
+        // Ensure the cursor is visible and change its color
+        cursor.style.borderBottom = '2px solid red'; // Set border thickness and color explicitly
+        
+        // Revert the color back to the original after 100 milliseconds
+        setTimeout(() => {
+            cursor.style.borderBottom = originalBorderBottom;
+        }, 100);
+        
         num_errors++;
     }
     highlightKey(key_pressed);
