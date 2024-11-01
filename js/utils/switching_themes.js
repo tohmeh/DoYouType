@@ -7,7 +7,7 @@ function updateThemeButtons(color) {
 }
 
 function switch_theme(theme) {
-    // Show loading indicator immediately
+    // Show loading indicator with fade-out animation
     showLoadingIndicator();
 
     // Set the path for the new background image based on the selected theme
@@ -26,45 +26,46 @@ function switch_theme(theme) {
             newBackgroundPath = 'images/backgrounds/retro.jpeg';
     }
 
-    setTimeout(()=> {
-        const img = new Image();
-        img.src = newBackgroundPath;
-    
-        img.onload = () => {
+    // Preload the new background image
+    const img = new Image();
+    img.src = newBackgroundPath;
+
+    // Set up the image load event handler
+    img.onload = () => {
+        // Delay applying the theme to wait for the animation to complete
+        setTimeout(() => {
             currentTextIndex = 0; // Reset to the first text for the new theme
-    
-            // Switch typing texts based on theme
+
+            // Switch typing texts and update the theme stylesheet
             switch (theme) {
                 case 'retro':
                     typingTexts = retroTypingTexts;
-                    themeStylesheet.href = 'css/retro.css'; // Update stylesheet
+                    themeStylesheet.href = 'css/retro.css';
                     break;
                 case 'ghibli':
                     typingTexts = ghibliTypingTexts;
-                    themeStylesheet.href = 'css/ghibli.css'; // Update stylesheet
+                    themeStylesheet.href = 'css/ghibli.css';
                     break;
                 case 'simpsons':
                     typingTexts = simpsonsTypingTexts;
-                    themeStylesheet.href = 'css/simpsons.css'; // Update stylesheet
+                    themeStylesheet.href = 'css/simpsons.css';
                     break;
                 default:
                     typingTexts = retroTypingTexts;
-                    themeStylesheet.href = 'css/retro.css'; // Update stylesheet
+                    themeStylesheet.href = 'css/retro.css';
             }
-    
+
             // Update the current typing content
             typing_area_content = typingTexts[currentTextIndex];
-    
-            // Remove loading indicator after the image is fully loaded
-            removeLoadingIndicator();
+
             // Reset the monitor content
             reset_monitor_content();
-    
-        };
-    }, 2000);   
+
+            // Remove loading indicator and show elements with a fade-in animation
+            removeLoadingIndicator();
+        }, 1500); // Wait for the fade-out animation to complete
+    };
 }
 
 window.updateThemeButtons = updateThemeButtons;
 window.switch_theme = switch_theme;
-
-

@@ -203,3 +203,70 @@
     background-color: rgba(255, 217, 15, 0.2);
     cursor: pointer;
 }
+
+
+#loading_gif{
+    display: none;;
+    z-index: 10;
+}
+#loading_gif_gif{
+    display: none;
+}
+#loading_word{
+    display: none;
+}
+
+@keyframes signalLossFade {
+    0% {
+      opacity: 1;
+      filter: grayscale(0%);
+    }
+    25% {
+      opacity: 0.7;
+      filter: grayscale(30%);
+    }
+    50% {
+      opacity: 0.5;
+      filter: grayscale(50%) brightness(1.2);
+    }
+    75% {
+      opacity: 0.3;
+      filter: grayscale(70%);
+    }
+    100% {
+      opacity: 0;
+      filter: grayscale(100%);
+    }
+  }
+  
+  .fade-out-signal {
+    animation: signalLossFade 1.5s ease forwards;
+  }
+
+  @keyframes signalGainFade {
+    0% {
+      opacity: 0;
+      filter: grayscale(100%);
+    }
+    25% {
+      opacity: 0.3;
+      filter: grayscale(70%);
+    }
+    50% {
+      opacity: 0.5;
+      filter: grayscale(50%) brightness(1.2);
+    }
+    75% {
+      opacity: 0.7;
+      filter: grayscale(30%);
+    }
+    100% {
+      opacity: 1;
+      filter: grayscale(0%);
+    }
+  }
+  
+  .fade-in-signal {
+    animation: signalGainFade 1.5s ease forwards;
+  }
+  
