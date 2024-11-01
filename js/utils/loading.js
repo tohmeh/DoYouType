@@ -1,9 +1,6 @@
 
 /* JavaScript Updates */
 function showLoadingIndicator() {
-    // Store current state of monitors
-    const wasLeftOpen = pressed_left_window;
-    const wasRightOpen = pressed_right_window;
     
     // Close monitors if they're open (without toggling pressed state)
     if (pressed_left_window) {

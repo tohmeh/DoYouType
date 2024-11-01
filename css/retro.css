@@ -10,16 +10,6 @@ body {
     background-attachment: fixed;
 }
 
-.blur_loading{
-    animation: blur_animation 5s ease-in-out;
-    filter: blur(10px);
-}
-
-@keyframes blur_animation {
-    0% { filter: blur(0px); }
-    100% { filter: blur(10px); }
-}
-
 .monitor {
     background-image: linear-gradient(
         to bottom right,
@@ -32,7 +22,6 @@ body {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
     outline: 10px solid rgb(2, 3, 61);
 }
-
 
 .monitor-content {
     color: #d3ffb8;
@@ -53,7 +42,9 @@ body {
     line-height: 1.5;
 }
 
-
+.secondary_monitor_content_result{
+    color: yellow;
+}
 .updated_text {
     color: #0df7a2; /* Vivid neon green */
     font-family: "Audiowide", sans-serif;
@@ -105,8 +96,7 @@ body {
 }
 
 .cursor {
-    border-bottom: 2px solid #00ff8d;  /* Dark blue-gray */
-    animation: blink 0.7s step-end infinite;
+    border-bottom: 2px solid #00ff8d;
 }
 
 .result_prompt {
@@ -138,9 +128,6 @@ body {
     animation: retro-glow 2s linear;
 }
 
-
-#avg_acc, #avg_wpm, #live_wpm, #live_acc, #final_wpm_result, #final_acc_result {
+#avg_acc, #avg_wpm, #live_wpm, #live_acc {
     color: #ffe600; /* Warm yellow */
 }
-
-

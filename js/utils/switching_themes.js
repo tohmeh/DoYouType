@@ -8,6 +8,7 @@ function updateThemeButtons(color) {
 
 function switch_theme(theme) {
     // Show loading indicator with fade-out animation
+    reset_monitor_content();
     showLoadingIndicator();
 
     // Set the path for the new background image based on the selected theme

@@ -1,4 +1,3 @@
-
 function highlightKey(keyPressed) {
     const keyMap = {
         'Escape': 'key_escape',
@@ -9,7 +8,7 @@ function highlightKey(keyPressed) {
         'Shift': ['key_shift_left', 'key_shift_right'],
         'Control': ['key_ctrl_left', 'key_ctrl_right'],
         'Alt': ['key_alt_left', 'key_alt_right'],
-        ' ': 'key_space'
+        ' ': 'key_space',
     };
 
     const keyId = keyMap[keyPressed] || `key_${keyPressed.toLowerCase()}`;

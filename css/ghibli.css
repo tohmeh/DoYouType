@@ -42,8 +42,8 @@ body {
     line-height: 1.5;
 }
 
-.secondary_monitor_content_result {
-    color: #6ba531;  /* Olive green */
+.secondary_monitor_content_result{
+    color:#6ba531;
 }
 
 .updated_text {
@@ -100,7 +100,6 @@ body {
     
 }
 
-
 .result_prompt {
     display: none;
     justify-content: space-around;
@@ -129,3 +128,6 @@ body {
     animation: ghibli-text-glow 4s linear infinite;
 }
 
+#avg_acc, #avg_wpm, #live_wpm, #live_acc {
+    color: #6ba531; /* Warm yellow */
+}

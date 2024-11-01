@@ -23,13 +23,9 @@ body {
     outline: 10px solid rgba(55,35,59,255);
 }
 
-
-
-
 .monitor-content {
     color: #ffe600;
    font-family: "Bangers", system-ui;
-
     font-size: 20px;
     padding: 10px;
     text-shadow: 0 0 1px #76ff76; /* Green glow */
@@ -46,10 +42,10 @@ body {
     text-shadow: 0 0 1px #76f9ff; /* Soft glow */
     line-height: 1.5;
 }
-.secondary_monitor_content_result {
-    color: #ffe600;  /* Olive green */
-}
 
+.secondary_monitor_content_result{
+    color:#ffe600;
+}
 .updated_text {
     color: #c547d18c; /* Vivid neon green */
    font-family: "Bangers", system-ui;
@@ -75,8 +71,6 @@ body {
     outline: 10px solid rgba(55,35,59,255);
 }
 
-
-
 .key {
     background-color: transparent;
     height: 30px;
@@ -92,8 +86,6 @@ body {
     animation: rgb-glow 3s infinite ease-in-out;
 }
 
-
-
 @keyframes rgb-glow {
     0%, 100% { box-shadow: 0 0 4px #fff, 0 0 6px #fff, 0 0 9px rgb(255, 255, 255); }
     33% { box-shadow: 0 0 4px #fff, 0 0 6px #fff, 0 0 9px rgb(0, 230, 255); } /* Softened the cyan */
@@ -107,7 +99,6 @@ body {
 
 .cursor {
     border-bottom: 2px solid #c3ff00; /* Neon green */
-
 }
 
 .result_prompt {
@@ -115,8 +106,7 @@ body {
     justify-content: space-around;
     font-size: 20px;
     color: #b8f7ff; /* Light orange */
- font-family: "Bangers", system-ui;
-
+    font-family: "Bangers", system-ui;
     margin-bottom: 5px;
 }
 
@@ -140,11 +130,4 @@ body {
 .retro-glow {
     animation: retro-glow 2s linear;
 }
-
-
-#avg_acc, #avg_wpm, #live_wpm, #live_acc, #final_wpm_result, #final_acc_result {
-    color: #ffe600; /* Warm yellow */
-}
-
-
 
