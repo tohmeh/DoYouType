@@ -26,47 +26,42 @@ function switch_theme(theme) {
             newBackgroundPath = 'images/backgrounds/retro.jpeg';
     }
 
-    // Preload the new background image
-    const img = new Image();
-    img.src = newBackgroundPath;
-
-    img.onload = () => {
-        currentTextIndex = 0; // Reset to the first text for the new theme
-
-        // Switch typing texts based on theme
-        switch (theme) {
-            case 'retro':
-                typingTexts = retroTypingTexts;
-                themeStylesheet.href = 'css/retro.css'; // Update stylesheet
-                break;
-            case 'ghibli':
-                typingTexts = ghibliTypingTexts;
-                themeStylesheet.href = 'css/ghibli.css'; // Update stylesheet
-                break;
-            case 'simpsons':
-                typingTexts = simpsonsTypingTexts;
-                themeStylesheet.href = 'css/simpsons.css'; // Update stylesheet
-                break;
-            default:
-                typingTexts = retroTypingTexts;
-                themeStylesheet.href = 'css/retro.css'; // Update stylesheet
-        }
-
-        // Update the current typing content
-        typing_area_content = typingTexts[currentTextIndex];
-
-        // Remove loading indicator after the image is fully loaded
-        removeLoadingIndicator();
-        // Reset the monitor content
-        reset_monitor_content();
-
-    };
-
-    // Add error handling in case image fails to load
-    img.onerror = () => {
-        console.error('Failed to load background image');
-        removeLoadingIndicator(); // Ensure loading indicator is removed even on error
-    };
+    setTimeout(()=> {
+        const img = new Image();
+        img.src = newBackgroundPath;
+    
+        img.onload = () => {
+            currentTextIndex = 0; // Reset to the first text for the new theme
+    
+            // Switch typing texts based on theme
+            switch (theme) {
+                case 'retro':
+                    typingTexts = retroTypingTexts;
+                    themeStylesheet.href = 'css/retro.css'; // Update stylesheet
+                    break;
+                case 'ghibli':
+                    typingTexts = ghibliTypingTexts;
+                    themeStylesheet.href = 'css/ghibli.css'; // Update stylesheet
+                    break;
+                case 'simpsons':
+                    typingTexts = simpsonsTypingTexts;
+                    themeStylesheet.href = 'css/simpsons.css'; // Update stylesheet
+                    break;
+                default:
+                    typingTexts = retroTypingTexts;
+                    themeStylesheet.href = 'css/retro.css'; // Update stylesheet
+            }
+    
+            // Update the current typing content
+            typing_area_content = typingTexts[currentTextIndex];
+    
+            // Remove loading indicator after the image is fully loaded
+            removeLoadingIndicator();
+            // Reset the monitor content
+            reset_monitor_content();
+    
+        };
+    }, 2000);   
 }
 
 window.updateThemeButtons = updateThemeButtons;
