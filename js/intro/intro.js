@@ -55,7 +55,7 @@ function fadeOutIntroContent() {
         introContents.forEach(element => {
             element.remove(); // Remove each child element from the DOM
         });
-    }, 2000b); // Duration should match the CSS transition time (1s here)
+    }, 2000); // Duration should match the CSS transition time (1s here)
 }
 
 // Call the function when needed
