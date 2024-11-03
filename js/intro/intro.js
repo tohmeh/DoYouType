@@ -121,6 +121,6 @@ start_typing_button.addEventListener('click', ()=>{
 
     fadeOutIntroContent();
     setTimeout(()=>{
-        window.location.href = "index.html";  
+        window.location.href = "pages.html";  
     }, 3000);
 })
