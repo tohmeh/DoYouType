@@ -1,5 +1,5 @@
 function applyLoseEffect(wpm, acc, duration = 2000) {
-    if (wpm < 38) {
+    if (wpm < wpm_speed) {
         final_wpm_result.classList.add('fail_glow');
     }
     if (acc < 92) {

@@ -49,7 +49,7 @@ let currentIndex = 0;
 let currentTextIndex = 0 ;
 let startTime = null;
 let begin_count = 0;
-let typing_area_content = typing_area.textContent;    
+let typing_area_content = retroTypingTexts[0];    
 let intervalId = null;
 let isFinished = false;
 let num_errors = 0;
@@ -57,8 +57,85 @@ let totalTests = 0;
 let totalWPM = 0;
 let totalAcc = 0;
 let typingTexts = retroTypingTexts;
+const theme = localStorage.getItem('selectedTheme');
+const level = localStorage.getItem('selectedLevel');
+console.log(theme);
+console.log(level);
+// Example usage
+function getWPMSpeed() {
+    const level = localStorage.getItem('selectedLevel');
+    const speedMap = {
+        '1': 20,
+        '2': 40,
+        '3': 60,
+        '4': 80,
+        '5': 100
+    };
+    return speedMap[level] || 40; // default to 40 if level not found
+}
 
+function loadThemeStyles() {
+    const theme = localStorage.getItem('selectedTheme');
+    
+    // Show loading indicator with fade-out animation
+    reset_monitor_content();
+    // showFirstLoadingIndicator();
 
+    // Set the path for the new background image based on the selected theme
+    let newBackgroundPath;
+    switch (theme) {
+        case 'retro':
+            newBackgroundPath = 'images/backgrounds/retro.jpeg';
+            break;
+        case 'ghibli':
+            newBackgroundPath = 'images/backgrounds/ghibli.png';
+            break;
+        case 'simpsons':
+            newBackgroundPath = 'images/backgrounds/simpson.jpg';
+            break;
+        default:
+            newBackgroundPath = 'images/backgrounds/retro.jpeg';
+    }
+
+    // Preload the new background image
+    const img = new Image();
+    img.src = newBackgroundPath;
+
+    // Set up the image load event handler
+    img.onload = () => {
+            currentTextIndex = 0; // Reset to the first text for the new theme
+
+            // Switch typing texts and update the theme stylesheet
+            switch (theme) {
+                case 'retro':
+                    typingTexts = retroTypingTexts;
+                    themeStylesheet.href = 'css/retro.css';
+                    updateThemeButtons('yellow');
+                    break;
+                case 'ghibli':
+                    typingTexts = ghibliTypingTexts;
+                    themeStylesheet.href = 'css/ghibli.css';
+                    updateThemeButtons('brown');
+                    break;
+                case 'simpson':
+                    typingTexts = simpsonsTypingTexts;
+                    themeStylesheet.href = 'css/simpsons.css';
+                    updateThemeButtons('yellow');
+                    break;
+                default:
+                    typingTexts = retroTypingTexts;
+                    themeStylesheet.href = 'css/retro.css';
+                    updateThemeButtons('yellow');
+            }
+
+            // Update the current typing content
+            typing_area_content = typingTexts[currentTextIndex];
+
+            // Reset the monitor content
+            reset_monitor_content();
+    };
+    wpm_speed = getWPMSpeed();
+}
 
 typing_area_content = typingTexts[currentTextIndex];
 
@@ -76,6 +153,6 @@ right_arrow.addEventListener('click', right_monitor_animation_function);
 
 // showLoadingIndicator();
 // removeLoadingIndicator();
-
+loadThemeStyles();
 updateDisplay();
 user_input.focus();

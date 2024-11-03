@@ -1,0 +1,166 @@
+/* Base styles */
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        -45deg, 
+        rgba(34, 34, 58, 0.95), 
+        rgba(208, 78, 247, 0.85),
+        rgba(99, 253, 214, 0.85)
+    );
+    margin: 0%;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.intro {
+    height: 100%;
+    width: 15cm;
+    background-image: linear-gradient(
+        to bottom right,
+        rgba(247, 78, 230, 0.6),
+        rgba(253, 236, 99, 0.6)
+    );
+    opacity: 0.85;
+    border-right: 10px solid rgb(2, 3, 61);
+    border-left: 10px solid rgb(2, 3, 61);
+    display: flex;
+    font-family: "Audiowide", sans-serif;
+    flex-direction: column;
+} 
+
+@keyframes closingUp {
+    0%{
+
+    }
+}
+/* Content styling */
+.intro_content {
+    color: #d3ffb8;
+    padding: 10px;
+    line-height: 1.5;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.intro_content_subtitle {
+    font-size: 30px;
+}
+
+.intro_content_title {
+    text-shadow: 0 0 15px #ffd000;
+    font-size: 50px;
+}
+
+.intro_option {
+    cursor: pointer;
+    transition: transform 0.2s ease-in, color 0.2s ease;
+}
+
+.intro_option:hover {
+    transform: scale(1.2);
+}
+
+#retro_button:hover{
+    color: aqua;
+}
+
+.active_retro_button{
+    transform: scale(1.2);
+    color: aqua;
+}
+.active_ghibli_button{
+    transform: scale(1.2);
+    color: #0f8066;
+}
+.active_simpson_button{
+    transform: scale(1.2);
+    color: #ffd000;
+}
+
+#simpson_button:hover{
+    color: #ffd000;
+}
+
+#ghibli_button:hover{
+    color:green;
+}
+
+#level1:hover {
+    color: #c7fff0; /* Very light mint */
+}
+
+#level2:hover {
+    color: #93f6dd; /* Light teal */
+}
+
+#level3:hover {
+    color: #5cd6bb; /* Medium teal */
+}
+
+#level4:hover {
+    color: #2ba68d; /* Darker teal */
+}
+
+#level5:hover {
+    color: #0f8066; /* Dark teal */
+}
+
+/* Active styles for level buttons */
+.active_level1 {
+    color: #c7fff0; /* Very light mint */
+    transform: scale(1.2);
+}
+
+.active_level2 {
+    color: #93f6dd; /* Light teal */
+    transform: scale(1.2);
+}
+
+.active_level3 {
+    color: #5cd6bb; /* Medium teal */
+    transform: scale(1.2);
+}
+
+.active_level4 {
+    color: #2ba68d; /* Darker teal */
+    transform: scale(1.2);
+}
+
+.active_level5 {
+    color: #0f8066; /* Dark teal */
+    transform: scale(1.2);
+}
+
+.start_typing{
+    color:darkred;
+    cursor: pointer;
+    display: none;
+}
+.start_typing:hover{
+    scale: 1.2;
+    transition: scale 0.2s ease-in;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease; /* Adjust the duration as needed */
+}

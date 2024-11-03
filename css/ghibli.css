@@ -24,11 +24,11 @@ body {
 }
 
 .monitor-content {
-    color: #3A4A3C;  /* Dark green */
+    color: #0F2519;  /* Dark green */
     font-family: "Metal", serif;
     font-size: 20px;
     padding: 10px;
-    text-shadow: 1px 1px 2px #D0E7D2;  /* Light mint */
+    text-shadow: 1px 1px 2px #B0E0B6;  /* Light mint */
     line-height: 1.5;
     height: 70%;
 }
@@ -85,10 +85,11 @@ body {
 }
 
 @keyframes ghibli-glow {
-    0%, 100% { box-shadow: 0 0 2px #F9E79F, 0 0 5px #F9E79F, 0 0 7px #F4D03F; }  /* Light yellow to Yellow */
-    33% { box-shadow: 0 0 2px #ABEBC6, 0 0 5px #ABEBC6, 0 0 7px #58D68D; }  /* Pale green to Medium sea green */
-    66% { box-shadow: 0 0 2px #AED6F1, 0 0 5px #AED6F1, 0 0 7px #3498DB; }  /* Light blue to Dodger blue */
+    0%, 100% { box-shadow: 0 0 2px #FFD700, 0 0 5px #FFA500, 0 0 7px #FF8C00; }  /* Gold to Orange */
+    33% { box-shadow: 0 0 2px #2E8B57, 0 0 5px #00FF7F, 0 0 7px #3CB371; }  /* Sea Green variants */
+    66% { box-shadow: 0 0 2px #1E90FF, 0 0 5px #4169E1, 0 0 7px #0000FF; }  /* Blue variants */
 }
+
 
 .key.active {
     background-color: #5C7746;  /* Forest green */
@@ -118,11 +119,12 @@ body {
 }
 
 @keyframes ghibli-text-glow {
-    0% { text-shadow: 0 0 5px #F9E79F, 0 0 10px #F4D03F; }  /* Light yellow to Yellow */
-    33% { text-shadow: 0 0 5px #ABEBC6, 0 0 10px #58D68D; }  /* Pale green to Medium sea green */
-    66% { text-shadow: 0 0 5px #AED6F1, 0 0 10px #3498DB; }  /* Light blue to Dodger blue */
-    100% { text-shadow: 0 0 5px #F9E79F, 0 0 10px #F4D03F; }  /* Back to Light yellow to Yellow */
+    0% { text-shadow: 0 0 5px #FFD700, 0 0 10px #FFA500; }
+    33% { text-shadow: 0 0 5px #2E8B57, 0 0 10px #00FF7F; }
+    66% { text-shadow: 0 0 5px #1E90FF, 0 0 10px #4169E1; }
+    100% { text-shadow: 0 0 5px #FFD700, 0 0 10px #FFA500; }
 }
+
 
 .ghibli-glow {
     animation: ghibli-text-glow 4s linear infinite;

@@ -42,18 +42,22 @@ function switch_theme(theme) {
                 case 'retro':
                     typingTexts = retroTypingTexts;
                     themeStylesheet.href = 'css/retro.css';
+                    updateThemeButtons('yellow');
                     break;
                 case 'ghibli':
                     typingTexts = ghibliTypingTexts;
                     themeStylesheet.href = 'css/ghibli.css';
+                    updateThemeButtons('brown');
                     break;
                 case 'simpsons':
                     typingTexts = simpsonsTypingTexts;
                     themeStylesheet.href = 'css/simpsons.css';
+                    updateThemeButtons('yellow');
                     break;
                 default:
                     typingTexts = retroTypingTexts;
                     themeStylesheet.href = 'css/retro.css';
+                    updateThemeButtons('yellow');
             }
 
             // Update the current typing content

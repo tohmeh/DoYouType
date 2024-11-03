@@ -9,6 +9,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+    
 
 .monitor {
     background-image: linear-gradient(
@@ -131,3 +132,4 @@ body {
 #avg_acc, #avg_wpm, #live_wpm, #live_acc {
     color: #ffe600; /* Warm yellow */
 }
+
