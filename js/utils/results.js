@@ -27,7 +27,7 @@ function finishTyping() {
 
     wpm_box.innerHTML = '_';
     live_acc.innerHTML = '_';
-    if (parseInt(final_wpm_result.innerHTML) < wpm_speed || accuracy < 92)
+    if (parseInt(final_wpm_result.innerHTML) < 40 || accuracy < 92)
     {
 
         applyLoseEffect(parseInt(final_wpm_result.innerHTML), accuracy);
