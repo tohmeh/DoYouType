@@ -69,7 +69,22 @@ restart_button.addEventListener('click', reset_monitor_content);
 next_button.addEventListener('click', iterate_text);
 left_arrow.addEventListener('click', left_monitor_animation_function);
 right_arrow.addEventListener('click', right_monitor_animation_function);
-window.onload = () => {document.getElementById("body").style.visibility = "visible";};
+window.addEventListener("load", () => {
+    const backgroundImageUrl = "images/backgrounds/retro.jpeg";
+
+    // Create a new image element to preload the background image
+    const img = new Image();
+    img.src = backgroundImageUrl;
+
+    // When the image has loaded, show the body
+    img.onload = () => {
+        // Set the background image (if you need to apply it dynamically)
+        document.getElementById("body").style.backgroundImage = `url(${backgroundImageUrl})`;
+
+        document.getElementById("body").style.display = "flex";
+    };
+});
+
 
 updateDisplay();
 user_input.focus();
