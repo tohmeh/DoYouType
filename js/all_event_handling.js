@@ -37,7 +37,6 @@ const retroTheme = document.getElementById('retro-theme');
 const gibliTheme = document.getElementById('ghibli-theme');
 const simpsonTheme = document.getElementById('simpsons-theme');
 const loadingDiv = document.getElementById('loading_gif');
-const Body = document.getElementById('body');
 const loadingGif = document.getElementById('loading_gif_gif');
 const loadingWord = document.getElementById('loading_word');
 const keyboard = document.getElementById('keyboard');
@@ -70,7 +69,7 @@ restart_button.addEventListener('click', reset_monitor_content);
 next_button.addEventListener('click', iterate_text);
 left_arrow.addEventListener('click', left_monitor_animation_function);
 right_arrow.addEventListener('click', right_monitor_animation_function);
-
+window.onload = () => {document.getElementById("body").style.visibility = "visible";};
 
 updateDisplay();
 user_input.focus();
