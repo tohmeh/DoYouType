@@ -14,3 +14,8 @@ Fun clone inspired by Edclub and MonkeyType! I created this project out of curio
 1. Clone the repository:
    ```bash
    git clone https://github.com/tohmeh/DoYouType.git
+## Demonstration Video
+
+Watch the functionality in action:
+
+[![Watch the video](./video.mp4)
