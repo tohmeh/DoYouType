@@ -18,7 +18,6 @@ const simpsonsTypingTexts = [
 ];
 
 
-//this are all the html used to set an event or help an event 
 const typing_area = document.getElementById('typing-area');
 const user_input = document.getElementById('user-input');
 const left_arrow = document.getElementById('left_arrow');

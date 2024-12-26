@@ -1,135 +1,37 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     background-image: url('../images/backgrounds/retro.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+	font-family: "Audiowide", sans-serif;
+	font-size: 15px;
+	color: #ffedf7;
 }
-    
 
 .monitor {
     background-image: linear-gradient(
         to bottom right,
-        rgba(247, 78, 230, 0.6), /* Slightly deeper magenta */
-        rgba(253, 236, 99, 0.6) /* Slightly warmer yellow */
+        rgba(247, 78, 230, 0.6), 
+        rgba(253, 236, 99, 0.6)
     );
-    opacity: 0.85;
-    backdrop-filter: blur(12px);
-    border-radius: 12px;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
     outline: 10px solid rgb(2, 3, 61);
-}
 
-.monitor-content {
-    color: #d3ffb8;
-    font-family: "Audiowide", sans-serif;
-    font-size: 15px;
-    padding: 10px;
-    text-shadow: 0 0 1px #76ff76; /* Green glow */
-    line-height: 1.5;
-    height: 70%;
-}
-
-.secondary_monitor_content {
-    color: #b8f7ff; /* Calmer cyan for better balance */
-    font-family: "Audiowide", sans-serif;
-    font-size: 15px;
-    padding: 10px;
-    text-shadow: 0 0 1px #76f9ff; /* Soft glow */
-    line-height: 1.5;
-}
-
-.secondary_monitor_content_result{
-    color: yellow;
-}
-.updated_text {
-    color: #0df7a2; /* Vivid neon green */
-    font-family: "Audiowide", sans-serif;
-    font-size: 15px;
-    text-shadow: 0 0 1px #00ff99;
 }
 
 .keyboard {
-    width: 800px;
-    height: 250px;
-    transform: perspective(1000px) rotateX(50deg);
     background-image: linear-gradient(
         to bottom right,
-        rgba(253, 73, 230, 0.6), /* Deeper magenta */
-        rgba(255, 236, 96, 0.6) /* Vivid yellow */
+        rgba(253, 73, 230, 0.6), 
+        rgba(255, 236, 96, 0.6) 
     );
-    opacity: 0.9;
-    backdrop-filter: blur(10px);
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Slightly heavier shadow */
     outline: 10px solid rgb(2, 3, 61);
 }
 
 .key {
-    background-color: transparent;
-    height: 30px;
-    margin: 2px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
-    font-family: "Audiowide", sans-serif;
-    font-size: 17px;
-    color: #ffedf7; /* Slightly softer white */
-    border: 2px solid #59f7ff; /* Softer cyan */
-    animation: rgb-glow 3s infinite ease-in-out;
+    border: 2px solid #59f7ff; 
 }
-
-@keyframes rgb-glow {
-    0%, 100% { box-shadow: 0 0 4px #fff, 0 0 6px #fff, 0 0 9px rgb(255, 255, 255); }
-    33% { box-shadow: 0 0 4px #fff, 0 0 6px #fff, 0 0 9px rgb(0, 230, 255); } /* Softened the cyan */
-    66% { box-shadow: 0 0 4px #fff, 0 0 6px #fff, 0 0 9px rgb(255, 0, 220); } /* Vivid magenta */
-}
-
-.key.active {
-    background-color: #ffe600;
-    box-shadow: 0 0 5px #ffef70;
-}
-
-.cursor {
+.cursor , .updated_text{
     border-bottom: 2px solid #00ff8d;
 }
 
-.result_prompt {
-    display: none;
-    justify-content: space-around;
-    font-size: 15px;
-    color: #b8f7ff; /* Light orange */
-    font-family: "Audiowide", sans-serif;
-    margin-bottom: 5px;
-}
-
-.result_prompt_below {
-    display: none;
-    justify-content: space-around;
-    font-size: 12px;
-    color: #ffd98f; /* Muted yellow-orange */
-    font-family: "Audiowide", sans-serif;
-}
-
-@keyframes retro-glow {
-    0% { text-shadow: 0 0 5px #ff00de, 0 0 10px #ff00de, 0 0 20px #ff00de; }
-    25% { text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff; }
-    50% { text-shadow: 0 0 5px #ffff00, 0 0 10px #ffff00, 0 0 20px #ffff00; }
-    75% { text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00; }
-    100% { text-shadow: 0 0 5px #ff00de, 0 0 10px #ff00de, 0 0 20px #ff00de; }
-}
-
-.retro-glow {
-    animation: retro-glow 2s linear;
-}
-
-#avg_acc, #avg_wpm, #live_wpm, #live_acc {
+#avg_acc, #avg_wpm, #live_wpm, #live_acc ,.result_prompt_below, .key.active, .secondary_monitor_content_result{
     color: #ffe600; /* Warm yellow */
 }
 
