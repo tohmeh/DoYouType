@@ -1,0 +1,39 @@
+.leaderboard-title {
+	font-size: 2.5rem;
+	text-align: center;
+	margin-bottom: 2rem;
+}
+.main_div {
+	height: 100vh;
+	width: 30%;
+	
+	padding: 2rem;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-width: 900px;
+	justify-content:flex-start;
+}
+
+
+.leaderboard-table {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 0 10px;
+}
+.leaderboard-table th {
+	padding: 15px;
+	text-align: left;
+	font-size: 1.2rem;
+}
+
+.leaderboard-table td {
+	padding: 15px;
+}
+
+.leaderboard-table td, .leaderboard-table th {
+	padding: 10px;
+	text-align: center;
+}

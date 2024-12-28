@@ -183,24 +183,7 @@
     cursor: pointer;
 }
 
-#ghibli-theme {
-    color: #75cb2f;  /* Olive Drab */
-}
 
-#ghibli-theme:hover {
-    background-color: rgba(92, 119, 70, 0.2);  /* Olive Drab with opacity */
-    cursor: pointer;
-}
-
-#simpsons-theme {
-    color: #ffd90f; /* Simpsons yellow */
-    text-shadow: 0 0 5px #ffd90f;
-}
-
-#simpsons-theme:hover {
-    background-color: rgba(255, 217, 15, 0.2);
-    cursor: pointer;
-}
 
 
 #loading_gif{
@@ -267,12 +250,7 @@
   .fade-in-signal {
     animation: signalGainFade 1.5s ease forwards;
   }
-  
-.leaderboard-btn {
-    color: #9cf962;
-    text-decoration: none;
-    display: block;
-}
+
 
 .leaderboard-btn:hover {
 	cursor: pointer;
@@ -287,6 +265,8 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+	font-family: "Audiowide", sans-serif;
+	font-size: 15px;
 }
 
 .monitor {
@@ -357,4 +337,26 @@ body{
     display: none;
     justify-content: space-around;
     
+}
+
+
+.leaderboard-btn {
+    color: #9cf962;
+    text-decoration: none;
+    display: block;
+    /* padding: 10px 20px; */
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.leaderboard-btn:hover {
+    cursor: pointer;
+	color: #60bb28;
+    transform: translateY(-2px);
+}
+
+.leaderboard-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 0 5px rgba(156, 249, 98, 0.3);
 }

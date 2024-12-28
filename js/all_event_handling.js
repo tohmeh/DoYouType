@@ -5,18 +5,6 @@ const retroTypingTexts = [
     "The truest measure of progress is how we rise after facing obstacles."
 ];
 
-const ghibliTypingTexts = [
-    "Even the smallest seed dreams of becoming a mighty forest.",
-    "Sometimes the quietest moments hold the loudest truths.",
-    "Magic isn't found in spells, but in seeing the world with wonder."
-];
-
-const simpsonsTypingTexts = [
-    "If Plan A doesn't work, the alphabet has 25 more letters.",
-    "The best mistakes are the ones that make great stories later.",
-    "Sometimes the long way around is the shortest path to wisdom."
-];
-
 
 const typing_area = document.getElementById('typing-area');
 const user_input = document.getElementById('user-input');
@@ -33,8 +21,6 @@ const avg_acc = document.getElementById('avg_acc');
 const monitor = document.getElementById('monitor');
 const themeStylesheet = document.getElementById('style_sheet');
 const retroTheme = document.getElementById('retro-theme');
-const gibliTheme = document.getElementById('ghibli-theme');
-const simpsonTheme = document.getElementById('simpsons-theme');
 const loadingDiv = document.getElementById('loading_gif');
 const loadingGif = document.getElementById('loading_gif_gif');
 const loadingWord = document.getElementById('loading_word');
@@ -60,8 +46,6 @@ typing_area_content = typingTexts[currentTextIndex];
 
 
 retroTheme.addEventListener('click', function() {switch_theme('retro');});
-gibliTheme.addEventListener('click', function() {switch_theme('ghibli');});
-simpsonTheme.addEventListener('click', function() {switch_theme('simpsons');});
 document.addEventListener('keydown', handle_user_input);
 document.addEventListener('keyup', clear_after_user_input);
 restart_button.addEventListener('click', reset_monitor_content);
@@ -71,3 +55,5 @@ right_arrow.addEventListener('click', right_monitor_animation_function);
 
 updateDisplay();
 user_input.focus();
+
+

@@ -1,188 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>        
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DoYouType</title>
-    <link rel="stylesheet" href="css/retro.css" id="style_sheet">
-    <link rel="stylesheet" href="css/common.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" >
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Theme Customizer</title>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lacquer&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Londrina+Sketch&family=Metal&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Londrina+Sketch&family=Metal&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lacquer&family=Unkempt:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lacquer&family=Mansalva&family=Unkempt:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Gochi+Hand&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background-image: url('images/backgrounds/retro.jpeg');
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: "Audiowide", sans-serif;
+            color: #ffedf7;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            height: max-content;
+            background: linear-gradient(135deg,
+                rgba(247, 78, 230, 0.7),
+                rgba(253, 236, 99, 0.7));
+            backdrop-filter: blur(12px);
+            outline: 10px solid rgb(2, 3, 61);
+            padding: 20px;
+        }
+
+        .header {
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            color: #ffedf7;
+            margin-bottom: 5px;
+        }
+
+        .color-input-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        input[type="color"] {
+            width: 50px;
+            height: 40px;
+            border: none;
+            padding: 0;
+            background: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="color"]::-webkit-color-swatch-wrapper {
+            padding: 0;
+        }
+
+        input[type="color"]::-webkit-color-swatch {
+            border: none;
+            border-radius: 5px;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ffedf7;
+            border-radius: 5px;
+            background: rgba(51, 51, 51, 0.7);
+            color: #ffedf7;
+            font-family: 'Audiowide', sans-serif;
+        }
+
+        .background-options {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .background-option {
+            padding: 10px 20px;
+            border: 2px solid #ffedf7;
+            border-radius: 5px;
+            background: rgba(51, 51, 51, 0.7);
+            color: #ffedf7;
+            cursor: pointer;
+            font-family: 'Audiowide', sans-serif;
+        }
+
+        .background-option.active {
+            background: rgba(89, 247, 255, 0.3);
+            color: #ffedf7;
+        }
+
+        .section {
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #ffedf7;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
-<body id="body">
-    <div id="loading_gif" style="position:absolute; z-index: 1;display: flex; flex-direction: column;">
-        <div class="monitor-content" id="loading_word">loading</div>
-        <img src="images/gifs/loading.gif" style="width: 2cm;" id="loading_gif_gif">
-    </div>
-    <div style="height: 100px;"></div>
-    <div class="monitors">
-        <div style="display: flex; flex-direction: row;">
-            <div id="left_monitor" class="left_monitor_before">
-                <div class="secondary_monitor_content"> live wpm </div>
-                <div class="secondary_monitor_content secondary_monitor_content_result" id="live_wpm">_</div>
-                <div class="secondary_monitor_content"> live acc</div>
-                <div class="secondary_monitor_content secondary_monitor_content_result" id="live_acc">_</div>
-                <div class="secondary_monitor_content">avg wpm</div>
-                <div class="secondary_monitor_content secondary_monitor_content_result" id="avg_wpm">_</div>
-                <div class="secondary_monitor_content">avg acc</div>
-                <div class="secondary_monitor_content secondary_monitor_content_result" id="avg_acc">_</div>
-				<div class="secondary_monitor_content" style="margin-top: auto;">
-					<a href="leaderboard.html" class="leaderboard-btn">Leaderboard</a>
-				</div>
-            </div>
-            <div class="left_hover">
-                <img src="images/ui elements/yellow_arrow.png" style="height: 0.7cm;" class="arrow left_arrow" id="left_arrow">
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Theme Customizer</h1>
+        </div>
+
+        <div class="section">
+            <h2>Custom Colors</h2>
+            <div class="color-inputs">
+                <!-- Color inputs will be added here by JS -->
             </div>
         </div>
-        <div style="display: flex; flex-direction: column;">
-            <div class="monitor main_monitor" id="monitor">
-                <div id="typing-area" class="monitor-content">Hello world !</div>
-                <input type="text" id="user-input" class="hidden_input">
-                <div class="result_prompt">
-                    <div>
-                        WPM 
-                    </div>
-                    <div>
-                        ACC
-                    </div>
-                    <div>
-                        <img src="images/ui elements/yellow_restart.png" style="height: 0.7cm;" id="restart_button">
-                    </div>
-                    <div>
-                        <img src="images/ui elements/yellow_next.png" style="height: 0.7cm;" id="next_button">
-                    </div>
-                </div>
-                <div class="result_prompt result_prompt_below">
-                    <div id="final_wpm_result">
 
-                    </div>
-                    <div id="final_acc_result">
-
-                    </div>
-                    <div>
-                        
-                    </div>
-                    <div>
-
-                    </div>
-                </div>
+        <div class="section">
+            <h2>Background</h2>
+            <div class="background-options">
+                <button class="background-option active" data-type="color">Color</button>
+                <button class="background-option" data-type="image">Image</button>
             </div>
-            <!-- <div>
-                <img src="arrow.png" style="height: 0.7cm;"> 
-            </div> -->
-        </div>
-        <div style="display: flex; flex-direction: row;">
-            <div class="right_hover">
-                <img src="images/ui elements/yellow_arrow.png" style="height: 0.7cm;" class="arrow right_arrow" id="right_arrow">
-            </div>
-            <div id="right_monitor" class="right_monitor_before">
-                <div class="secondary_monitor_content">Change Theme :</div>
-                <div class="secondary_monitor_content" id="retro-theme">retro</div>
-                <div class="secondary_monitor_content" id="ghibli-theme">ghibli</div>
-                <div class="secondary_monitor_content" id="simpsons-theme">simpsons</div>
-				<div class="secondary_monitor_content" id="custom-theme">custom theme</div>
+            <div class="form-group" id="background-input">
+                <!-- Background input will be added here by JS -->
             </div>
         </div>
     </div>
-    <div class="keyboard" id="keyboard">
-        <!-- Row 1 -->
-        <div class="keyboard_row">
-            <div id="key_escape" class="key key-1u">Esc</div>
-            <div id="key_1" class="key key-1u">1</div>
-            <div id="key_2" class="key key-1u">2</div>
-            <div id="key_3" class="key key-1u">3</div>
-            <div id="key_4" class="key key-1u">4</div>
-            <div id="key_5" class="key key-1u">5</div>
-            <div id="key_6" class="key key-1u">6</div>
-            <div id="key_7" class="key key-1u">7</div>
-            <div id="key_8" class="key key-1u">8</div>
-            <div id="key_9" class="key key-1u">9</div>
-            <div id="key_0" class="key key-1u">0</div>
-            <div id="key_minus" class="key key-1u">-</div>
-            <div id="key_equals" class="key key-1u">=</div>
-            <div id="key_backspace" class="key key-2u">Bksp</div>
-        </div>
 
-        <!-- Row 2 -->
-        <div class="keyboard_row">
-            <div id="key_tab" class="key key-1_5u">Tab</div>
-            <div id="key_q" class="key key-1u">Q</div>
-            <div id="key_w" class="key key-1u">W</div>
-            <div id="key_e" class="key key-1u">E</div>
-            <div id="key_r" class="key key-1u">R</div>
-            <div id="key_t" class="key key-1u">T</div>
-            <div id="key_y" class="key key-1u">Y</div>
-            <div id="key_u" class="key key-1u">U</div>
-            <div id="key_i" class="key key-1u">I</div>
-            <div id="key_o" class="key key-1u">O</div>
-            <div id="key_p" class="key key-1u">P</div>
-            <div id="key_left_bracket" class="key key-1u">[</div>
-            <div id="key_right_bracket" class="key key-1u">]</div>
-            <div id="key_backslash" class="key key-1_5u">\</div>
-        </div>
-
-        <!-- Row 3 -->
-        <div class="keyboard_row">
-            <div id="key_capslock" class="key key-1_5u">Caps</div>
-            <div id="key_a" class="key key-1u">A</div>
-            <div id="key_s" class="key key-1u">S</div>
-            <div id="key_d" class="key key-1u">D</div>
-            <div id="key_f" class="key key-1u">F</div>
-            <div id="key_g" class="key key-1u">G</div>
-            <div id="key_h" class="key key-1u">H</div>
-            <div id="key_j" class="key key-1u">J</div>
-            <div id="key_k" class="key key-1u">K</div>
-            <div id="key_l" class="key key-1u">L</div>
-            <div id="key_semicolon" class="key key-1u">;</div>
-            <div id="key_quote" class="key key-1u">'</div>
-            <div id="key_enter" class="key key-2u">Enter</div>
-        </div>
-
-        <!-- Row 4 -->
-        <div class="keyboard_row">
-            <div id="key_shift_left" class="key key-2_5u">Shift</div>
-            <div id="key_z" class="key key-1u">Z</div>
-            <div id="key_x" class="key key-1u">X</div>
-            <div id="key_c" class="key key-1u">C</div>
-            <div id="key_v" class="key key-1u">V</div>
-            <div id="key_b" class="key key-1u">B</div>
-            <div id="key_n" class="key key-1u">N</div>
-            <div id="key_m" class="key key-1u">M</div>
-            <div id="key_comma" class="key key-1u">,</div>
-            <div id="key_period" class="key key-1u">.</div>
-            <div id="key_slash" class="key key-1u">/</div>
-            <div id="key_shift_right" class="key key-2_5u">Shift</div>
-        </div>
-
-        <!-- Row 5 (Control and Spacebar Row) -->
-        <div class="keyboard_row">
-            <div id="key_ctrl_left" class="key key-2u">ctrl</div>
-            <div class="key key-1u">^_^</div>
-            <div id="key_alt_left" class="key key-2u">alt</div>
-            <div id="key_space" class="key key-space">Space</div>
-            <div id="key_alt_right" class="key key-2u">alt</div>
-            <div class="key key-1u">^.^</div>
-            <div id="key_ctrl_right" class="key key-2u">ctrl</div>
-
-        </div>
-    </div>
-    <script src="js/utils/results.js"></script> <!-- Your file where functions are defined -->
-    <script src="js/utils/switching_themes.js"></script>
-    <script src="js/utils/text.js"></script>
-    <script src="js/utils/text_related_animation.js"></script>
-    <script src="js/utils/user_input.js"></script>
-    <script src="js/utils/secondary_monitors_animations.js"> </script>
-    <script src="js/utils/loading.js"></script>
-    <script src="js/all_event_handling.js"></script> 
+    <script>
+		// Store all our colors in a simple object
+		let colors = {
+		    background: '#f74ee6',
+		    textColor: '#ffedf7',
+		    monitorGradient1: '#f74ee6',
+		    monitorGradient2: '#fde663',
+		    monitorOutline: '#02033d',
+		    keysBorder: '#ffedf7',
+		    updatedText: '#00ff8d',
+		    resultColor: '#ffe600'
+		};
+		
+		// Get the container for our color inputs
+		const colorInputsContainer = document.querySelector('.color-inputs');
+		
+		// Create color inputs for each color
+		function createColorInputs() {
+		    // Clear existing inputs
+		    colorInputsContainer.innerHTML = '';
+		
+		    // Create inputs for each color
+		    for (let colorName in colors) {
+		        // Create container for this color input group
+		        let groupDiv = document.createElement('div');
+		        groupDiv.className = 'form-group';
+			
+		        // Create and add label
+		        let label = document.createElement('label');
+		        label.textContent = formatLabel(colorName);
+		        groupDiv.appendChild(label);
+			
+		        // Create container for the inputs
+		        let inputGroup = document.createElement('div');
+		        inputGroup.className = 'color-input-group';
+			
+		        // Create color input
+		        let colorInput = document.createElement('input');
+		        colorInput.type = 'color';
+		        colorInput.value = colors[colorName];
+		        colorInput.setAttribute('data-name', colorName);
+			
+		        // Create text input
+		        let textInput = document.createElement('input');
+		        textInput.type = 'text';
+		        textInput.value = colors[colorName];
+		        textInput.setAttribute('data-name', colorName);
+			
+		        // Add both inputs to their container
+		        inputGroup.appendChild(colorInput);
+		        inputGroup.appendChild(textInput);
+			
+		        // Add the input group to the main container
+		        groupDiv.appendChild(inputGroup);
+		        colorInputsContainer.appendChild(groupDiv);
+		    }
+		}
+		
+		// Format the label text (e.g., "monitorGradient1" -> "monitor gradient 1")
+		function formatLabel(text) {
+		    return text
+		        .replace(/([A-Z])/g, ' $1')  // Add space before capital letters
+		        .toLowerCase()                // Convert to lowercase
+		        .trim();                     // Remove extra spaces
+		}
+		
+		// Handle input changes
+		function handleInputChange(event) {
+		    let colorName = event.target.getAttribute('data-name');
+		    if (!colorName) return;
+		
+		    // Update the color in our storage
+		    colors[colorName] = event.target.value;
+		
+		    // Find the parent group
+		    let group = event.target.closest('.color-input-group');
+		    if (!group) return;
+		
+		    // Update both inputs in the group
+		    let inputs = group.querySelectorAll('input');
+		    inputs.forEach(input => {
+		        if (input !== event.target) {
+		            input.value = event.target.value;
+		        }
+		    });
+		}
+		
+		// Add event listener for all inputs
+		colorInputsContainer.addEventListener('input', handleInputChange);
+		
+		// Initial setup
+		createColorInputs();
+		
+		// Handle background type switching
+		let backgroundType = 'color';
+		let backgroundImage = '';
+		
+		const backgroundOptions = document.querySelectorAll('.background-option');
+		const backgroundInput = document.getElementById('background-input');
+		
+		function updateBackgroundInput() {
+		    if (backgroundType === 'color') {
+		        backgroundInput.innerHTML = `
+		            <div class="color-input-group">
+		                <input type="color" value="${colors.background}" data-name="background">
+		                <input type="text" value="${colors.background}" data-name="background">
+		            </div>
+		        `;
+		    } else {
+		        backgroundInput.innerHTML = `
+		            <input type="text" placeholder="Enter image URL..." value="${backgroundImage}">
+		        `;
+		    }
+		}
+		
+		// Add click handlers for background type buttons
+		backgroundOptions.forEach(button => {
+		    button.addEventListener('click', function() {
+		        // Remove active class from all buttons
+		        backgroundOptions.forEach(btn => btn.classList.remove('active'));
+			
+		        // Add active class to clicked button
+		        this.classList.add('active');
+			
+		        // Update background type
+		        backgroundType = this.getAttribute('data-type');
+			
+		        // Update the input field
+		        updateBackgroundInput();
+		    });
+		});
+		
+		// Initial background input setup
+		updateBackgroundInput();
+    </script>
 </body>
 </html>

@@ -1,33 +1,26 @@
 body {
     background-image: url('../images/backgrounds/retro.jpeg');
-	font-family: "Audiowide", sans-serif;
-	font-size: 15px;
+	/* background-color: #522e96; */
 	color: #ffedf7;
 }
 
-.monitor {
+.monitor ,.keyboard{
     background-image: linear-gradient(
         to bottom right,
         rgba(247, 78, 230, 0.6), 
         rgba(253, 236, 99, 0.6)
     );
     outline: 10px solid rgb(2, 3, 61);
-
-}
-
-.keyboard {
-    background-image: linear-gradient(
-        to bottom right,
-        rgba(253, 73, 230, 0.6), 
-        rgba(255, 236, 96, 0.6) 
-    );
-    outline: 10px solid rgb(2, 3, 61);
 }
 
 .key {
-    border: 2px solid #59f7ff; 
+    border: 2px solid #ffedf7; 
 }
-.cursor , .updated_text{
+
+.updated_text{
+	color: #00ff8d;
+}
+.cursor {
     border-bottom: 2px solid #00ff8d;
 }
 

@@ -25,7 +25,7 @@ async function switchToLogin() {
     }, 50);
     
     // Wait for 1 second before hiding the signup form
-    await wait(1000);
+    await wait(300);
     
     signupForm.style.visibility = 'hidden'; // Hide again if needed
 }
