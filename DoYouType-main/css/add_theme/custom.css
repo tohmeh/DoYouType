@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-image: url('../../images/backgrounds/retro.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Audiowide", sans-serif;
+    color: #ffedf7;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    height: 100vh;
+    background: linear-gradient(135deg,
+        rgba(247, 78, 230, 0.7),
+        rgba(253, 236, 99, 0.7));
+    backdrop-filter: blur(12px);
+    outline: 10px solid rgb(2, 3, 61);
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    color: #ffedf7;
+    margin-bottom: 5px;
+}
+
+.color-input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+input[type="color"] {
+    width: 50px;
+    height: 40px;
+    border: none;
+    padding: 0;
+    background: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ffedf7;
+    border-radius: 5px;
+    background: rgba(51, 51, 51, 0.7);
+    color: #ffedf7;
+    font-family: 'Audiowide', sans-serif;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background: rgba(89, 247, 255, 0.3);
+    border: 2px solid #ffedf7;
+    border-radius: 5px;
+    color: #ffedf7;
+    cursor: pointer;
+    font-family: 'Audiowide', sans-serif;
+    margin-top: 20px;
+}
+
+.section {
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    color: #ffedf7;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.back-link a{
+    color: #337ab7;
+    text-decoration: none;
+    
+}
+.back-link {
+    text-align: center;
+    margin-top: 20px;
+}

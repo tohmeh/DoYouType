@@ -1,0 +1,45 @@
+#restart_button {
+    transform: rotate(0deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+#restart_button:hover {
+    transform: rotate(360deg);
+}
+.arrow {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.left_arrow {
+    transform: rotate(180deg) translateX(10px);
+}
+
+.left_arrow2 {
+    transform: rotate(0deg) translateX(-15px);
+}
+
+.right_arrow {
+    transform: rotate(0deg) translateX(10px);
+}
+
+.right_arrow2 {
+    transform: rotate(180deg) translateX(-15px);
+}
+
+.left_arrow:hover {
+    transform: rotate(180deg) translateX(15px);
+}
+
+.left_arrow2:hover {
+    transform: rotate(0deg) translateX(-10px);
+}
+
+.right_arrow:hover {
+    transform: rotate(0deg) translateX(15px);
+}
+
+.right_arrow2:hover {
+    transform: rotate(180deg) translateX(-10px);
+}
+

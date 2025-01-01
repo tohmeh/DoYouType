@@ -1,0 +1,60 @@
+/* Base styles */
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../images/backgrounds/retro.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: "Audiowide", sans-serif;
+    overflow: hidden;
+}
+
+/* Main container */
+.main_div, .main-div {
+    height: 100vh;
+    width: 30%;
+    min-width: 900px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: linear-gradient(135deg,
+        rgba(247, 78, 230, 0.7),
+        rgba(253, 236, 99, 0.7));
+    outline: 10px solid rgb(2, 3, 61);
+}
+
+/* Leaderboard title */
+.leaderboard-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #ffedf7;
+}
+
+/* Leaderboard table styles */
+.leaderboard-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.leaderboard-table th {
+    padding: 15px;
+    text-align: left;
+    font-size: 1.2rem;
+    color: #ffedf7;
+    border-bottom: 2px solid #ffedf7;
+}
+
+.leaderboard-table td {
+    padding: 15px;
+    text-align: center;
+	color: #ffedf7;
+}

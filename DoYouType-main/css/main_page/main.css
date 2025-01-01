@@ -1,0 +1,40 @@
+body{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+	background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	font-family: "Audiowide", sans-serif;
+	font-size: 15px;
+}
+
+.hidden_input{
+    visibility: hidden;
+}
+
+.left_hover, .right_hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sign-out-button {
+    margin: 10px;
+}
+
+.sign-out-button a {
+    font-size: 16px;
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.sign-out-button a:hover {
+    color: darkred;
+}

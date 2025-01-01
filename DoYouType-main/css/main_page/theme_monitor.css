@@ -1,0 +1,95 @@
+
+.leaderboard-btn {
+    color: #9cf962;
+    text-decoration: none;
+    display: block;
+    /* padding: 10px 20px; */
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.leaderboard-btn:hover {
+    cursor: pointer;
+	color: #60bb28;
+    transform: translateY(-2px);
+}
+
+.leaderboard-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 0 5px rgba(156, 249, 98, 0.3);
+}
+
+.theme-selector-title {
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: 2px solid currentColor;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor:pointer;
+}
+
+.theme-option {
+    padding: 12px 15px;
+    margin: 8px 0;
+    border: 2px solid transparent; /* Always have border to prevent layout shift */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease; /* Reduced transition time */
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* Prevent text wrapping */
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.theme-option:hover {
+    border-color: currentColor;
+    transform: translateX(5px); /* Small transform instead of border changes */
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-option::after {
+    content: '►';
+    opacity: 0;
+    position: absolute;
+    right: 15px;
+    transition: opacity 0.2s ease; 
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.theme-option:hover::after {
+    opacity: 1;
+}
+
+.theme-option.active {
+    border-color: currentColor;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.add-theme-button {
+    padding: 12px;
+    margin-top: 20px;
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.add-theme-button:hover {
+    border-color: currentColor;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Add this to prevent text selection on click */
+.theme-option, .add-theme-button {
+    user-select: none;
+    -webkit-user-select: none;
+}
