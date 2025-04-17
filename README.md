@@ -18,5 +18,5 @@ Fun clone inspired by Edclub and MonkeyType! I created this project out of curio
 
 Watch the functionality in action:
 
-[Watch the Demonstration Video](./video.mp4)
+[Watch the Demonstration Video](.demonstrative_video/video.mp4)
 
