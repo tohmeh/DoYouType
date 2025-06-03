@@ -35,4 +35,4 @@ It was a fun and rewarding learning experience — from handling frontend animat
 
 Watch the functionality in action:
 
-[▶️ Watch the Demonstration Video](.demonstrative_video/video.mp4)
+[▶️ Watch the Demonstration Video](doyoutype video.mp4)
