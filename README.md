@@ -28,7 +28,7 @@ DoYouType/
 ├── images/       # Bundled backgrounds and UI icons
 ├── uploads/      # User-uploaded theme backgrounds
 ├── main.php      # Main typing interface
-├── login.php     # Login and signup
+├── login.php     # Login and signup 
 ├── leaderboard.php
 ├── custom.php    # Theme creator
 └── delete_theme.php
