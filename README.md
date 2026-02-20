@@ -22,6 +22,12 @@ This project requires a PHP server and a MySQL database.
 
 A demonstration video is included: [Watch the demo](doyoutype%20video.mp4)
 
-## License
+## Project Structure
 
-No license file found in this repository.
+```
+api/          Backend PHP endpoints (auth, stats, themes, leaderboard)
+css/          Stylesheets organized by page
+js/           Frontend logic (input handling, animations, results)
+images/       Bundled theme backgrounds and UI icons
+uploads/      User-uploaded theme backgrounds
+```
